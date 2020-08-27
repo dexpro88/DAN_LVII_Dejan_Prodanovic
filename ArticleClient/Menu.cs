@@ -12,6 +12,7 @@ namespace ArticleClient
         int billNumber = 0;
 
 
+        
         public Menu()
         {
             using (ServiceReference1.ArticleServiceClient wcf = new ServiceReference1.ArticleServiceClient())
@@ -24,6 +25,10 @@ namespace ArticleClient
             }
 
         }
+
+        /// <summary>
+        /// main menu of application
+        /// </summary>
         public void MainMenu()
         {
             string choice;
@@ -67,6 +72,9 @@ namespace ArticleClient
 
         }
 
+        /// <summary>
+        /// method that adds new article to the list of articles and saves changes to file
+        /// </summary>
         private void AddArticle()
         {
             Console.WriteLine("Unesite ime artikla:");
@@ -95,7 +103,9 @@ namespace ArticleClient
 
 
         }
-
+        /// <summary>
+        /// method that changes price of articles
+        /// </summary>
         private void UpdateArticle()
         {
 
@@ -148,6 +158,10 @@ namespace ArticleClient
             }
         }
 
+        /// <summary>
+        /// method for shoping of articles
+        /// it creates a file with shoping details
+        /// </summary>
         void CreateBill()
         {
             List<Article> articlesForBill = new List<Article>();
@@ -263,7 +277,9 @@ namespace ArticleClient
             }
 
         }
-
+        /// <summary>
+        /// method that show all articles
+        /// </summary>
         void ShowAllArticles()
         {
             List<Article> articles = new List<Article>();
@@ -286,12 +302,20 @@ namespace ArticleClient
 
 
 
-
+        /// <summary>
+        /// method that gets article by id
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
         public Article GetArticleById(string ID)
         {
             return articlesList.Where(x => x.ID.Equals(ID)).FirstOrDefault();
         }
 
+        /// <summary>
+        /// int input validation
+        /// </summary>
+        /// <returns></returns>
         int IntInput()
         {
             int returnValue;
@@ -310,7 +334,10 @@ namespace ArticleClient
 
             return returnValue;
         }
-
+        /// <summary>
+        /// decimal input validation
+        /// </summary>
+        /// <returns></returns>
         decimal DecimalInput()
         {
             decimal returnValue;

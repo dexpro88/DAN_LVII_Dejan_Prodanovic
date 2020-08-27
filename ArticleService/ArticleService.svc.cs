@@ -25,6 +25,10 @@ namespace ArticleService
 
         int billNumber = 1;
 
+        /// <summary>
+        /// reads articles from file
+        /// </summary>
+        /// <returns></returns>
         public List<Article> GetArticles()
         {
             List<Article> articles = new List<Article>();
@@ -60,6 +64,11 @@ namespace ArticleService
                 return articles;
             }
         }
+
+        /// <summary>
+        /// saves shoping details to file
+        /// </summary>
+        /// <param name="billText"></param>
         public void CreateBill(string billText)
         {
             try
@@ -107,6 +116,10 @@ namespace ArticleService
             }
         }
 
+        /// <summary>
+        /// updates data in file
+        /// </summary>
+        /// <param name="articles"></param>
         public void UpdateArticles(List<Article> articles)
         {
             try
