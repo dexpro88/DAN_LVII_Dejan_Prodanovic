@@ -1,0 +1,6 @@
+Majica,200,100
+Sorc,300,120
+Patike,400,220
+Carape,300,70
+Pantalone,300,180
+Cizme,100,300
