@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticleService", "ArticleService\ArticleService.csproj", "{8ADE6B62-0AA5-4FA9-B5B1-E82C42865CCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticleClient", "ArticleClient\ArticleClient.csproj", "{CC68D860-0E3B-462A-93BA-FA8C31AA5578}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8ADE6B62-0AA5-4FA9-B5B1-E82C42865CCA} = {8ADE6B62-0AA5-4FA9-B5B1-E82C42865CCA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{8ADE6B62-0AA5-4FA9-B5B1-E82C42865CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADE6B62-0AA5-4FA9-B5B1-E82C42865CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADE6B62-0AA5-4FA9-B5B1-E82C42865CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC68D860-0E3B-462A-93BA-FA8C31AA5578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC68D860-0E3B-462A-93BA-FA8C31AA5578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC68D860-0E3B-462A-93BA-FA8C31AA5578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC68D860-0E3B-462A-93BA-FA8C31AA5578}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

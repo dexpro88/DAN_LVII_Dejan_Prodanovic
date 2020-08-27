@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53317/ArticleService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53317/ArticleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53317/ArticleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ArticleService.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IArticleService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_GetArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArticlesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_CreateBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBill" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_CreateBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_UpdateArticles_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArticles" />
+  </wsdl:message>
+  <wsdl:message name="IArticleService_UpdateArticles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArticlesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IArticleService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetData" message="tns:IArticleService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetDataResponse" message="tns:IArticleService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/GetArticles" message="tns:IArticleService_GetArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/GetArticlesResponse" message="tns:IArticleService_GetArticles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBill">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/CreateBill" message="tns:IArticleService_CreateBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/CreateBillResponse" message="tns:IArticleService_CreateBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArticles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArticleService/UpdateArticles" message="tns:IArticleService_UpdateArticles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArticleService/UpdateArticlesResponse" message="tns:IArticleService_UpdateArticles_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IArticleService" type="tns:IArticleService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/GetArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBill">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/CreateBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArticles">
+      <soap:operation soapAction="http://tempuri.org/IArticleService/UpdateArticles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IArticleService" binding="tns:BasicHttpBinding_IArticleService">
+      <soap:address location="http://localhost:53317/ArticleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

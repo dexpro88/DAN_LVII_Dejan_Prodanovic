@@ -74,16 +74,13 @@ namespace ArticleService
                 sb.Append(billNumber);
                 billNumber++;
                 sb.Append("_");
-                sb.Append(dateTime.Day);
-                sb.Append(dateTime.Month);
-                sb.Append(dateTime.Year);
-                sb.Append(dateTime.Hour);
-                sb.Append(dateTime.Minute);
-                sb.Append(dateTime.Second);
+                string currentDate = DateTime.Now.ToString("ddMMyyyyHHmmss");
+
+                sb.Append(currentDate);
 
                 sb.Append(".txt");
 
-                //string path = sb.ToString();
+                
                 string billPath =
                 AppDomain.CurrentDomain.BaseDirectory + sb.ToString();
 
